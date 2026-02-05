@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <h2 class = "text-center">All Employees Data</h2>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">SNo</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in allemployee %}
+    <tr>
+      <th scope="row">{{i.sno}}</th>
+      <td>{{i.name}}</td>
+      <td>{{i.email}}</td>
+    </tr>
+    {% endfor %}
+    
+  </tbody>
+</table>
+</div>
+{% endblock body %}
